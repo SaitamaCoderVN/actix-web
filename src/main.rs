@@ -24,7 +24,7 @@ async fn main() -> std::io::Result<()> {
             .service(hello)
             .service(echo)
     })
-    .bind(format!("127.0.0.1:{}", port))?
+    .bind(format!("0.0.0.0:{}", port))?
     .run()
     .await
 }
